@@ -23,10 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-jf7k%j84kmof*u$3cyxu+zq4@cl06xh9gfjeguaizc*z22!!r!'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# SECURITY WARNING: don't run with debug turned on in production!; in production now - Debug - False;
+DEBUG = False
 
-ALLOWED_HOSTS = []
+# only heroku can be host
+ALLOWED_HOSTS = ['learning-log-on-django.herokuapp.com']
 
 
 # Application definition
