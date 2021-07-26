@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-jf7k%j84kmof*u$3cyxu+zq4@cl06xh9gfjeguaizc*z22!!r!'
 
 # SECURITY WARNING: don't run with debug turned on in production!; in production now - Debug - False;
-DEBUG = False
+DEBUG = True
 
 # only heroku can be host
-ALLOWED_HOSTS = ['learning-log-on-django.herokuapp.com']
+ALLOWED_HOSTS = ['learning-log-on-django.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -154,6 +154,5 @@ if os.getcwd() == '/app':
 
     # Конфигурация статических ресурсов
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    STATIC_ROOT = 'staticfiles'
-    STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),
-    )
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'))
